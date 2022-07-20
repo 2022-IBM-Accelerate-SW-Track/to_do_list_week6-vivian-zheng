@@ -98,7 +98,7 @@ In this file, we hold user data in the `users` variable, and persist the data in
 
 ```
 
-This will add a user with the name `user` and password `password` to the user store. The user's plaintext password is not stored, but instead a SHA256 hash of it. The `authorizer` function hashes the password that the client sends, and checks it against the users store. This way we don't risk leaking a plaintext password.
+This will add a user with the name `user` and password `password` to the user store. The user's plaintext password is not stored, but instead a SHA256 hash of it. The `authenticator` function hashes the password that the client sends, and checks it against the users store. This way we don't risk leaking a plaintext password.
 
 The `upsertUser` function can be used to create new users and add them to the store.
 

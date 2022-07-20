@@ -100,3 +100,10 @@ app.get("/logout", (req, res) => {
     res.clearCookie('user');
     res.end();
 });
+
+
+app.post("/items", cookieAuth, addItem);
+
+app.get("/items", cookieAuth, getItems);
+
+app.get("/items/search", cookieAuth, searchItems);
